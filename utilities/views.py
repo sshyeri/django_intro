@@ -25,19 +25,19 @@ def graduation(request):
 def imagepick(request):
     return render(request, 'utilities/imagepick.html')
     
-def today(request):
-    key = "80f1ea7bdfb5a7f94a02608b259e1b89"
-    url = f"https://api.openweathermap.org/data/2.5/weather?q=Seoul,kr&lang=kr&appid={key}"
-    response = requests.get(url).json()
-    weather = response["weather"][0]["description"]
-    temp = response["main"]["temp"]
-    temp -= 273.15
-    temp_min = response["main"]["temp_min"]
-    temp_min -= 273.15
-    temp_max = response["main"]["temp_max"]
-    temp_max -= 273.15
-    return render(request, 'utilities/today.html', {'weather' : weather,
-                    'temp' : int(temp), 'temp_min' : temp_min, 'temp_max' : temp_max})
+# def today(request):
+#     key = "80f1ea7bdfb5a7f94a02608b259e1b89"
+#     url = f"https://api.openweathermap.org/data/2.5/weather?q=Seoul,kr&lang=kr&appid={key}"
+#     response = requests.get(url).json()
+#     weather = response["weather"][0]["description"]
+#     temp = response["main"]["temp"]
+#     temp -= 273.15
+#     temp_min = response["main"]["temp_min"]
+#     temp_min -= 273.15
+#     temp_max = response["main"]["temp_max"]
+#     temp_max -= 273.15
+#     return render(request, 'utilities/today.html', {'weather' : weather,
+#                     'temp' : int(temp), 'temp_min' : temp_min, 'temp_max' : temp_max})
      
 fonts =['short', 'utopia', 'rounded', 'acrobatic', 'alligator']
 
