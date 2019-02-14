@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+<!--위치 주의! 무조건 extends는 맨 위에!-->
+{% load static %}
+
+{% block title %}Static_Example{% endblock %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" />
+{% endblock %}
+{% block body %} 
+    <img src="{% static 'Einstein.jpg' %}", alt="image"></img>
+    
+{% endblock %}
